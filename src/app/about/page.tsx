@@ -1,6 +1,6 @@
 'use client';
 
-import { LocaleProvider, useLocale } from '@/lib/locale-context';
+import { useLocale } from '@/lib/locale-context';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Container from '@/components/ui/Container';
@@ -145,9 +145,5 @@ function AboutContent() {
 }
 
 export default function AboutPage() {
-  return (
-    <LocaleProvider>
-      <AboutContent />
-    </LocaleProvider>
-  );
+  return <AboutContent />;
 }

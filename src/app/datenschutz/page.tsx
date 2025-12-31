@@ -46,14 +46,15 @@ Legal basis: Art. 6 para. 1 lit. b GDPR (contract initiation) or Art. 6 para. 1 
 Your data will be deleted after final processing of your inquiry, unless legal retention obligations apply.`
         },
         {
-          title: '4. Cookies',
-          content: `Our website uses cookies. Cookies are small text files stored on your device by your browser.
+          title: '4. Cookies and Local Storage',
+          content: `Our website uses local storage (localStorage) to save your language preference. This data is stored only in your browser and is not transmitted to our servers.
 
 We use:
-- Technically necessary cookies (for website functionality)
-- Preference cookies (e.g., for language selection)
+- Local storage for language preference (to remember your selected language)
 
-You can configure your browser to refuse cookies or to alert you before accepting cookies.`
+This data is processed on the basis of Art. 6 para. 1 lit. f GDPR (legitimate interest in providing a user-friendly website). You can delete this data at any time through your browser settings.
+
+We do not use tracking cookies or third-party cookies.`
         },
         {
           title: '5. Your Rights',
@@ -117,14 +118,15 @@ Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) oder Art. 6 Abs.
 Ihre Daten werden nach abschließender Bearbeitung Ihrer Anfrage gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.`
         },
         {
-          title: '4. Cookies',
-          content: `Unsere Website verwendet Cookies. Cookies sind kleine Textdateien, die von Ihrem Browser auf Ihrem Gerät gespeichert werden.
+          title: '4. Cookies und lokaler Speicher',
+          content: `Unsere Website verwendet lokalen Speicher (localStorage), um Ihre Sprachpräferenz zu speichern. Diese Daten werden nur in Ihrem Browser gespeichert und nicht an unsere Server übertragen.
 
 Wir verwenden:
-- Technisch notwendige Cookies (für die Website-Funktionalität)
-- Präferenz-Cookies (z.B. für die Sprachauswahl)
+- Lokalen Speicher für die Sprachpräferenz (um Ihre gewählte Sprache zu speichern)
 
-Sie können Ihren Browser so konfigurieren, dass Cookies abgelehnt oder vor dem Akzeptieren gewarnt werden.`
+Diese Daten werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet (berechtigtes Interesse an einer benutzerfreundlichen Website). Sie können diese Daten jederzeit über Ihre Browsereinstellungen löschen.
+
+Wir verwenden keine Tracking-Cookies oder Cookies von Drittanbietern.`
         },
         {
           title: '5. Ihre Rechte',
@@ -186,14 +188,15 @@ Estos datos se procesan sobre la base del Art. 6 párr. 1 lit. f RGPD para permi
 Base legal: Art. 6 párr. 1 lit. b RGPD (inicio de contrato) o Art. 6 párr. 1 lit. f RGPD (interés legítimo en responder consultas).`
         },
         {
-          title: '4. Cookies',
-          content: `Nuestra web utiliza cookies. Las cookies son pequeños archivos de texto almacenados en su dispositivo por su navegador.
+          title: '4. Cookies y Almacenamiento Local',
+          content: `Nuestra web utiliza almacenamiento local (localStorage) para guardar su preferencia de idioma. Estos datos se almacenan solo en su navegador y no se transmiten a nuestros servidores.
 
 Utilizamos:
-- Cookies técnicamente necesarias (para la funcionalidad del sitio)
-- Cookies de preferencias (p.ej., para selección de idioma)
+- Almacenamiento local para preferencia de idioma (para recordar su idioma seleccionado)
 
-Puede configurar su navegador para rechazar cookies o alertarle antes de aceptarlas.`
+Estos datos se procesan sobre la base del Art. 6 párr. 1 lit. f RGPD (interés legítimo en proporcionar una web fácil de usar). Puede eliminar estos datos en cualquier momento a través de la configuración de su navegador.
+
+No utilizamos cookies de seguimiento ni cookies de terceros.`
         },
         {
           title: '5. Sus Derechos',
@@ -251,14 +254,15 @@ Questi dati vengono elaborati sulla base dell'Art. 6 par. 1 lett. f GDPR per con
 Base giuridica: Art. 6 par. 1 lett. b GDPR (avvio contratto) o Art. 6 par. 1 lett. f GDPR (interesse legittimo a rispondere alle richieste).`
         },
         {
-          title: '4. Cookie',
-          content: `Il nostro sito utilizza cookie. I cookie sono piccoli file di testo memorizzati sul tuo dispositivo dal browser.
+          title: '4. Cookie e Archiviazione Locale',
+          content: `Il nostro sito utilizza l'archiviazione locale (localStorage) per salvare la tua preferenza linguistica. Questi dati sono memorizzati solo nel tuo browser e non vengono trasmessi ai nostri server.
 
 Utilizziamo:
-- Cookie tecnicamente necessari (per la funzionalità del sito)
-- Cookie di preferenza (es. per la selezione della lingua)
+- Archiviazione locale per la preferenza linguistica (per ricordare la lingua selezionata)
 
-Puoi configurare il browser per rifiutare i cookie o ricevere avvisi prima di accettarli.`
+Questi dati vengono elaborati sulla base dell'Art. 6 par. 1 lett. f GDPR (interesse legittimo a fornire un sito web user-friendly). Puoi eliminare questi dati in qualsiasi momento attraverso le impostazioni del browser.
+
+Non utilizziamo cookie di tracciamento o cookie di terze parti.`
         },
         {
           title: '5. I Tuoi Diritti',
@@ -316,14 +320,15 @@ Aceste date sunt prelucrate pe baza Art. 6 alin. 1 lit. f GDPR pentru a permite 
 Baza legală: Art. 6 alin. 1 lit. b GDPR (inițiere contract) sau Art. 6 alin. 1 lit. f GDPR (interes legitim în răspunsul la solicitări).`
         },
         {
-          title: '4. Cookie-uri',
-          content: `Site-ul nostru folosește cookie-uri. Cookie-urile sunt fișiere text mici stocate pe dispozitivul dvs. de către browser.
+          title: '4. Cookie-uri și Stocare Locală',
+          content: `Site-ul nostru folosește stocare locală (localStorage) pentru a salva preferința dvs. de limbă. Aceste date sunt stocate doar în browserul dvs. și nu sunt transmise serverelor noastre.
 
 Utilizăm:
-- Cookie-uri necesare tehnic (pentru funcționalitatea site-ului)
-- Cookie-uri de preferințe (ex. pentru selectarea limbii)
+- Stocare locală pentru preferința de limbă (pentru a memora limba selectată)
 
-Puteți configura browserul pentru a refuza cookie-urile sau pentru a vă alerta înainte de a le accepta.`
+Aceste date sunt prelucrate pe baza Art. 6 alin. 1 lit. f GDPR (interes legitim în a oferi un site web ușor de utilizat). Puteți șterge aceste date oricând prin setările browserului.
+
+Nu folosim cookie-uri de urmărire sau cookie-uri de la terți.`
         },
         {
           title: '5. Drepturile Dumneavoastră',

@@ -1,6 +1,6 @@
 'use client';
 
-import { LocaleProvider, useLocale } from '@/lib/locale-context';
+import { useLocale } from '@/lib/locale-context';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Container from '@/components/ui/Container';
@@ -114,9 +114,5 @@ function TeamContent() {
 }
 
 export default function TeamPage() {
-  return (
-    <LocaleProvider>
-      <TeamContent />
-    </LocaleProvider>
-  );
+  return <TeamContent />;
 }
