@@ -53,6 +53,21 @@ export default function Footer() {
                   {t.nav.contact}
                 </a>
               </li>
+              <li>
+                <Link href="/about" className="text-sm text-neutral-400 hover:text-white transition-colors">
+                  {t.nav.about}
+                </Link>
+              </li>
+              <li>
+                <Link href="/team" className="text-sm text-neutral-400 hover:text-white transition-colors">
+                  {t.nav.team}
+                </Link>
+              </li>
+              <li>
+                <Link href="/quote" className="text-sm text-neutral-400 hover:text-white transition-colors">
+                  {t.nav.configurator}
+                </Link>
+              </li>
             </ul>
           </div>
 

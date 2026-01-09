@@ -78,7 +78,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               </svg>
             </div>
             <div className="flex-1">
-              <div className="text-sm font-medium text-neutral-900">Call directly</div>
+              <div className="text-sm font-medium text-neutral-900">{t.modal.callDirectly}</div>
               <div className="text-sm text-neutral-500">+43 660 175 9059</div>
             </div>
             <svg className="w-5 h-5 text-neutral-400 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,7 +96,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               </svg>
             </div>
             <div className="flex-1">
-              <div className="text-sm font-medium text-neutral-900">Send an email</div>
+              <div className="text-sm font-medium text-neutral-900">{t.modal.sendEmail}</div>
               <div className="text-sm text-neutral-500">alex@motogna.tech</div>
             </div>
             <svg className="w-5 h-5 text-neutral-400 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -117,7 +117,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             </div>
             <div className="flex-1">
               <div className="text-sm font-medium text-neutral-900">WhatsApp</div>
-              <div className="text-sm text-neutral-500">Quick response</div>
+              <div className="text-sm text-neutral-500">{t.modal.quickResponse}</div>
             </div>
             <svg className="w-5 h-5 text-neutral-400 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -130,14 +130,14 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
-            <span>Typically responds within 24 hours</span>
+            <span>{t.modal.responseTime}</span>
           </div>
           <div className="flex items-center gap-3 text-sm text-neutral-500 mt-2">
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
-            <span>Based in Austria (CET timezone)</span>
+            <span>{t.modal.location}</span>
           </div>
         </div>
       </div>

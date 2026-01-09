@@ -18,8 +18,8 @@ export default function Impressum() {
           title: 'Company Information',
           content: `MOTOGNA Tech Studio
 Alex Daniel Motogna
-[Address]
-[City, Postal Code]
+Murzgasse 2/13
+8600 Bruck an der Mur
 Austria`
         },
         {
@@ -62,8 +62,8 @@ Awarding country: Austria`
           title: 'Angaben zum Unternehmen',
           content: `MOTOGNA Tech Studio
 Alex Daniel Motogna
-[Adresse]
-[PLZ Ort]
+Murzgasse 2/13
+8600 Bruck an der Mur
 Österreich`
         },
         {
@@ -106,8 +106,8 @@ Verleihungsstaat: Österreich`
           title: 'Información de la Empresa',
           content: `MOTOGNA Tech Studio
 Alex Daniel Motogna
-[Dirección]
-[Ciudad, Código Postal]
+Murzgasse 2/13
+8600 Bruck an der Mur
 Austria`
         },
         {
@@ -150,8 +150,8 @@ País otorgante: Austria`
           title: 'Informazioni Aziendali',
           content: `MOTOGNA Tech Studio
 Alex Daniel Motogna
-[Indirizzo]
-[CAP Città]
+Murzgasse 2/13
+8600 Bruck an der Mur
 Austria`
         },
         {
@@ -194,8 +194,8 @@ Paese di conferimento: Austria`
           title: 'Informații Companie',
           content: `MOTOGNA Tech Studio
 Alex Daniel Motogna
-[Adresă]
-[Cod Poștal Oraș]
+Murzgasse 2/13
+8600 Bruck an der Mur
 Austria`
         },
         {

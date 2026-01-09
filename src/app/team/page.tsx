@@ -4,8 +4,6 @@ import { useLocale } from '@/lib/locale-context';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Container from '@/components/ui/Container';
-import Button from '@/components/ui/Button';
-import Link from 'next/link';
 
 function TeamContent() {
   const { t } = useLocale();
@@ -85,25 +83,6 @@ function TeamContent() {
                   </div>
                 </div>
               ))}
-            </div>
-          </Container>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 lg:py-24">
-          <Container>
-            <div className="text-center max-w-2xl mx-auto">
-              <h2 className="text-2xl lg:text-3xl font-semibold text-neutral-900 tracking-tight mb-4">
-                {t.team.cta.title}
-              </h2>
-              <p className="text-neutral-600 mb-8">
-                {t.team.cta.subtitle}
-              </p>
-              <Link href="/#contact">
-                <Button size="lg">
-                  {t.team.cta.button}
-                </Button>
-              </Link>
             </div>
           </Container>
         </section>

@@ -6,7 +6,7 @@ import Container from '../ui/Container';
 
 type FilterType = 'all' | 'platforms' | 'software' | 'websites';
 
-type ProjectKey = 'rhinos' | 'ecohousing' | 'tradefighters' | 'filipbonat' | 'teamtrainer' | 'restaurantedel' | 'azmoldovan';
+type ProjectKey = 'rhinos' | 'ecohousing' | 'tradefighters' | 'filipbonat' | 'teamtrainer' | 'restaurantedel' | 'azmoldovan' | 'l2pcontrol' | 'schrattererdbau';
 
 interface ProjectMeta {
   id: number;
@@ -71,6 +71,22 @@ const projectsMeta: ProjectMeta[] = [
     stack: ['WordPress', 'PHP', 'CSS', 'JavaScript'],
     category: 'websites',
     url: 'https://az-moldovan.at',
+    isLive: true,
+  },
+  {
+    id: 8,
+    key: 'l2pcontrol',
+    stack: ['React', 'FastAPI', 'PostgreSQL', 'WebSocket', 'Python', 'TanStack Query', 'Tailwind CSS'],
+    category: 'software',
+    url: 'https://l2p-control-zehr.vercel.app',
+    isLive: true,
+  },
+  {
+    id: 9,
+    key: 'schrattererdbau',
+    stack: ['Next.js', 'TypeScript', 'Tailwind CSS', 'React', 'Vercel'],
+    category: 'websites',
+    url: 'https://www.schratter-erdbau.at',
     isLive: true,
   },
 ];

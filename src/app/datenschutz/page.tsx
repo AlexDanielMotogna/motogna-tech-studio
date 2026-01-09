@@ -19,11 +19,11 @@ export default function Datenschutz() {
           title: '1. Data Controller',
           content: `MOTOGNA Tech Studio
 Alex Daniel Motogna
-[Address]
-[City, Postal Code]
+Murzgasse 2/13
+8600 Bruck an der Mur
 Austria
 
-Email: [email@example.com]`
+Email: office@motogna.tech`
         },
         {
           title: '2. Data Collection on Our Website',
@@ -91,11 +91,11 @@ Our security measures are continuously improved in line with technological devel
           title: '1. Verantwortlicher',
           content: `MOTOGNA Tech Studio
 Alex Daniel Motogna
-[Adresse]
-[PLZ Ort]
+Murzgasse 2/13
+8600 Bruck an der Mur
 Österreich
 
-E-Mail: [email@example.com]`
+E-Mail: office@motogna.tech`
         },
         {
           title: '2. Datenerfassung auf unserer Website',
@@ -163,11 +163,11 @@ Unsere Sicherheitsmaßnahmen werden entsprechend der technologischen Entwicklung
           title: '1. Responsable del Tratamiento',
           content: `MOTOGNA Tech Studio
 Alex Daniel Motogna
-[Dirección]
-[Ciudad, Código Postal]
+Murzgasse 2/13
+8600 Bruck an der Mur
 Austria
 
-Email: [email@example.com]`
+Email: office@motogna.tech`
         },
         {
           title: '2. Recopilación de Datos en Nuestra Web',
@@ -229,11 +229,11 @@ No utilizamos cookies de seguimiento ni cookies de terceros.`
           title: '1. Titolare del Trattamento',
           content: `MOTOGNA Tech Studio
 Alex Daniel Motogna
-[Indirizzo]
-[CAP Città]
+Murzgasse 2/13
+8600 Bruck an der Mur
 Austria
 
-Email: [email@example.com]`
+Email: office@motogna.tech`
         },
         {
           title: '2. Raccolta Dati sul Nostro Sito',
@@ -295,11 +295,11 @@ Non utilizziamo cookie di tracciamento o cookie di terze parti.`
           title: '1. Operator de Date',
           content: `MOTOGNA Tech Studio
 Alex Daniel Motogna
-[Adresă]
-[Cod Poștal Oraș]
+Murzgasse 2/13
+8600 Bruck an der Mur
 Austria
 
-Email: [email@example.com]`
+Email: office@motogna.tech`
         },
         {
           title: '2. Colectarea Datelor pe Site-ul Nostru',
