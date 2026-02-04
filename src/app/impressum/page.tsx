@@ -24,20 +24,22 @@ Austria`
         },
         {
           title: 'Contact',
-          content: `Email: [email@example.com]
-Phone: [+43 XXX XXXXXXX]`
+          content: `Email: alex@motogna.tech
+Phone: +43 660 175 9059`
         },
         {
           title: 'Business Registration',
-          content: `Business type: [e.g., Einzelunternehmen / GmbH]
-UID-Nr: [ATU XXXXXXXX]
-Commercial Register: [if applicable]
-Supervisory Authority: [Bezirkshauptmannschaft / Magistrat]`
+          content: `Business type: Einzelunternehmen (Sole Proprietorship)
+Trade: Services in automatic data processing and information technology
+GISA Number: 39260086
+Registration date: 26.01.2026
+Supervisory Authority: Bezirkshauptmannschaft Bruck-Mürzzuschlag`
         },
         {
           title: 'Professional Regulations',
           content: `Applicable regulations: Gewerbeordnung (GewO)
-Professional title: IT-Dienstleister
+Trade classification: Freies Gewerbe (Free Trade)
+Professional title: IT Service Provider
 Awarding country: Austria`
         },
         {
@@ -68,19 +70,21 @@ Murzgasse 2/13
         },
         {
           title: 'Kontakt',
-          content: `E-Mail: [email@example.com]
-Telefon: [+43 XXX XXXXXXX]`
+          content: `E-Mail: alex@motogna.tech
+Telefon: +43 660 175 9059`
         },
         {
           title: 'Unternehmensregistrierung',
-          content: `Unternehmensform: [z.B. Einzelunternehmen / GmbH]
-UID-Nr: [ATU XXXXXXXX]
-Firmenbuchnummer: [falls zutreffend]
-Aufsichtsbehörde: [Bezirkshauptmannschaft / Magistrat]`
+          content: `Unternehmensform: Einzelunternehmen
+Gewerbe: Dienstleistungen in der automatischen Datenverarbeitung und Informationstechnik
+GISA-Zahl: 39260086
+Anmeldedatum: 26.01.2026
+Aufsichtsbehörde: Bezirkshauptmannschaft Bruck-Mürzzuschlag`
         },
         {
           title: 'Berufsrechtliche Regelungen',
           content: `Anwendbare Rechtsvorschriften: Gewerbeordnung (GewO)
+Gewerbeart: Freies Gewerbe
 Berufsbezeichnung: IT-Dienstleister
 Verleihungsstaat: Österreich`
         },
@@ -112,19 +116,21 @@ Austria`
         },
         {
           title: 'Contacto',
-          content: `Email: [email@example.com]
-Teléfono: [+43 XXX XXXXXXX]`
+          content: `Email: alex@motogna.tech
+Teléfono: +43 660 175 9059`
         },
         {
           title: 'Registro Comercial',
-          content: `Tipo de empresa: [p.ej., Einzelunternehmen / GmbH]
-UID-Nr: [ATU XXXXXXXX]
-Registro Mercantil: [si aplica]
-Autoridad de Supervisión: [Bezirkshauptmannschaft / Magistrat]`
+          content: `Tipo de empresa: Einzelunternehmen (Empresa Individual)
+Actividad comercial: Servicios en procesamiento automático de datos y tecnología de la información
+Número GISA: 39260086
+Fecha de registro: 26.01.2026
+Autoridad de Supervisión: Bezirkshauptmannschaft Bruck-Mürzzuschlag`
         },
         {
           title: 'Regulaciones Profesionales',
           content: `Regulaciones aplicables: Gewerbeordnung (GewO)
+Clasificación comercial: Freies Gewerbe (Comercio Libre)
 Título profesional: Proveedor de servicios IT
 País otorgante: Austria`
         },
@@ -156,19 +162,21 @@ Austria`
         },
         {
           title: 'Contatto',
-          content: `Email: [email@example.com]
-Telefono: [+43 XXX XXXXXXX]`
+          content: `Email: alex@motogna.tech
+Telefono: +43 660 175 9059`
         },
         {
           title: 'Registrazione Aziendale',
-          content: `Tipo di attività: [es. Einzelunternehmen / GmbH]
-UID-Nr: [ATU XXXXXXXX]
-Registro delle imprese: [se applicabile]
-Autorità di vigilanza: [Bezirkshauptmannschaft / Magistrat]`
+          content: `Tipo di attività: Einzelunternehmen (Ditta Individuale)
+Attività commerciale: Servizi di elaborazione automatica dei dati e tecnologia dell'informazione
+Numero GISA: 39260086
+Data di registrazione: 26.01.2026
+Autorità di vigilanza: Bezirkshauptmannschaft Bruck-Mürzzuschlag`
         },
         {
           title: 'Regolamenti Professionali',
           content: `Normative applicabili: Gewerbeordnung (GewO)
+Classificazione commerciale: Freies Gewerbe (Commercio Libero)
 Titolo professionale: Fornitore di servizi IT
 Paese di conferimento: Austria`
         },
@@ -200,19 +208,21 @@ Austria`
         },
         {
           title: 'Contact',
-          content: `Email: [email@example.com]
-Telefon: [+43 XXX XXXXXXX]`
+          content: `Email: alex@motogna.tech
+Telefon: +43 660 175 9059`
         },
         {
           title: 'Înregistrare Comercială',
-          content: `Tip afacere: [ex. Einzelunternehmen / GmbH]
-UID-Nr: [ATU XXXXXXXX]
-Registrul Comerțului: [dacă este cazul]
-Autoritate de Supraveghere: [Bezirkshauptmannschaft / Magistrat]`
+          content: `Tip afacere: Einzelunternehmen (Întreprindere Individuală)
+Activitate comercială: Servicii de prelucrare automată a datelor și tehnologia informației
+Număr GISA: 39260086
+Data înregistrării: 26.01.2026
+Autoritate de Supraveghere: Bezirkshauptmannschaft Bruck-Mürzzuschlag`
         },
         {
           title: 'Reglementări Profesionale',
           content: `Reglementări aplicabile: Gewerbeordnung (GewO)
+Clasificare comercială: Freies Gewerbe (Comerț Liber)
 Titlu profesional: Furnizor servicii IT
 Țara de acordare: Austria`
         },

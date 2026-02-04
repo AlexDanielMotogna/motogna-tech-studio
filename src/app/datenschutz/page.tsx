@@ -13,7 +13,7 @@ export default function Datenschutz() {
     en: {
       title: 'Privacy Policy',
       subtitle: 'Information about data processing according to GDPR',
-      lastUpdated: 'Last updated: January 2025',
+      lastUpdated: 'Last updated: January 26, 2026',
       sections: [
         {
           title: '1. Data Controller',
@@ -23,7 +23,7 @@ Murzgasse 2/13
 8600 Bruck an der Mur
 Austria
 
-Email: office@motogna.tech`
+Email: alex@motogna.tech`
         },
         {
           title: '2. Data Collection on Our Website',
@@ -85,7 +85,7 @@ Our security measures are continuously improved in line with technological devel
     de: {
       title: 'Datenschutzerklärung',
       subtitle: 'Informationen zur Datenverarbeitung gemäß DSGVO',
-      lastUpdated: 'Zuletzt aktualisiert: Januar 2025',
+      lastUpdated: 'Zuletzt aktualisiert: 26. Januar 2026',
       sections: [
         {
           title: '1. Verantwortlicher',
@@ -95,7 +95,7 @@ Murzgasse 2/13
 8600 Bruck an der Mur
 Österreich
 
-E-Mail: office@motogna.tech`
+E-Mail: alex@motogna.tech`
         },
         {
           title: '2. Datenerfassung auf unserer Website',
@@ -157,7 +157,7 @@ Unsere Sicherheitsmaßnahmen werden entsprechend der technologischen Entwicklung
     es: {
       title: 'Política de Privacidad',
       subtitle: 'Información sobre el procesamiento de datos según el RGPD',
-      lastUpdated: 'Última actualización: Enero 2025',
+      lastUpdated: 'Última actualización: 26 de enero de 2026',
       sections: [
         {
           title: '1. Responsable del Tratamiento',
@@ -167,7 +167,7 @@ Murzgasse 2/13
 8600 Bruck an der Mur
 Austria
 
-Email: office@motogna.tech`
+Email: alex@motogna.tech`
         },
         {
           title: '2. Recopilación de Datos en Nuestra Web',
@@ -223,7 +223,7 @@ No utilizamos cookies de seguimiento ni cookies de terceros.`
     it: {
       title: 'Informativa sulla Privacy',
       subtitle: 'Informazioni sul trattamento dei dati secondo il GDPR',
-      lastUpdated: 'Ultimo aggiornamento: Gennaio 2025',
+      lastUpdated: 'Ultimo aggiornamento: 26 gennaio 2026',
       sections: [
         {
           title: '1. Titolare del Trattamento',
@@ -233,7 +233,7 @@ Murzgasse 2/13
 8600 Bruck an der Mur
 Austria
 
-Email: office@motogna.tech`
+Email: alex@motogna.tech`
         },
         {
           title: '2. Raccolta Dati sul Nostro Sito',
@@ -289,7 +289,7 @@ Non utilizziamo cookie di tracciamento o cookie di terze parti.`
     ro: {
       title: 'Politica de Confidențialitate',
       subtitle: 'Informații despre prelucrarea datelor conform GDPR',
-      lastUpdated: 'Ultima actualizare: Ianuarie 2025',
+      lastUpdated: 'Ultima actualizare: 26 ianuarie 2026',
       sections: [
         {
           title: '1. Operator de Date',
@@ -299,7 +299,7 @@ Murzgasse 2/13
 8600 Bruck an der Mur
 Austria
 
-Email: office@motogna.tech`
+Email: alex@motogna.tech`
         },
         {
           title: '2. Colectarea Datelor pe Site-ul Nostru',
