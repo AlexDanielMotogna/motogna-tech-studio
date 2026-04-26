@@ -34,11 +34,6 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#solutions" className="text-sm text-neutral-400 hover:text-white transition-colors">
-                  {t.nav.solutions}
-                </a>
-              </li>
-              <li>
                 <a href="#work" className="text-sm text-neutral-400 hover:text-white transition-colors">
                   {t.nav.work}
                 </a>
@@ -46,6 +41,11 @@ export default function Footer() {
               <li>
                 <a href="#process" className="text-sm text-neutral-400 hover:text-white transition-colors">
                   {t.nav.process}
+                </a>
+              </li>
+              <li>
+                <a href="#pricing" className="text-sm text-neutral-400 hover:text-white transition-colors">
+                  {t.nav.pricing}
                 </a>
               </li>
               <li>
@@ -61,11 +61,6 @@ export default function Footer() {
               <li>
                 <Link href="/team" className="text-sm text-neutral-400 hover:text-white transition-colors">
                   {t.nav.team}
-                </Link>
-              </li>
-              <li>
-                <Link href="/quote" className="text-sm text-neutral-400 hover:text-white transition-colors">
-                  {t.nav.configurator}
                 </Link>
               </li>
             </ul>

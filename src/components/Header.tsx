@@ -37,7 +37,6 @@ export default function Header() {
 
   const homeSections = [
     { href: '#services', label: t.nav.services },
-    { href: '#solutions', label: t.nav.solutions },
     { href: '#work', label: t.nav.work },
     { href: '#process', label: t.nav.process },
     { href: '#tech', label: t.nav.tech },
@@ -131,13 +130,6 @@ export default function Header() {
               >
                 {t.nav.team || 'Team'}
               </Link>
-
-              <Link
-                href="/quote"
-                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
-              >
-                {t.nav.configurator || 'Configurator'}
-              </Link>
             </div>
 
             <div className="hidden lg:flex items-center gap-4">
@@ -211,14 +203,6 @@ export default function Header() {
                   className="px-4 py-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50 transition-colors"
                 >
                   {t.nav.team || 'Team'}
-                </Link>
-
-                <Link
-                  href="/quote"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="px-4 py-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50 transition-colors"
-                >
-                  {t.nav.configurator || 'Configurator'}
                 </Link>
 
                 <div className="flex flex-col gap-2 px-4 pt-4 border-t border-neutral-100 mt-2">

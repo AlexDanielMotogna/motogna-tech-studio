@@ -7,37 +7,21 @@ import Button from '../ui/Button';
 export default function Pricing() {
   const { t } = useLocale();
 
-  const tiers = [
+  const packages = [
     {
-      title: t.pricing.website.title,
-      duration: t.pricing.website.duration,
-      description: t.pricing.website.description,
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-        </svg>
-      ),
+      key: 'basic' as const,
+      data: t.pricing.packages.basic,
+      highlighted: false,
     },
     {
-      title: t.pricing.design.title,
-      duration: t.pricing.design.duration,
-      description: t.pricing.design.description,
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-        </svg>
-      ),
+      key: 'standard' as const,
+      data: t.pricing.packages.standard,
+      highlighted: true,
     },
     {
-      title: t.pricing.software.title,
-      duration: t.pricing.software.duration,
-      description: t.pricing.software.description,
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-      ),
+      key: 'premium' as const,
+      data: t.pricing.packages.premium,
+      highlighted: false,
     },
   ];
 
@@ -53,37 +37,102 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {tiers.map((tier, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 items-stretch">
+          {packages.map((pkg) => (
             <div
-              key={index}
-              className="bg-white border border-neutral-200 p-8 hover:border-neutral-300 hover:shadow-sm transition-all duration-200"
+              key={pkg.key}
+              className={`relative flex flex-col p-8 transition-all duration-200 ${
+                pkg.highlighted
+                  ? 'bg-neutral-900 text-white border border-neutral-900 shadow-lg md:-translate-y-2'
+                  : 'bg-white border border-neutral-200 hover:border-neutral-300 hover:shadow-sm text-neutral-900'
+              }`}
             >
-              <div className="w-12 h-12 bg-neutral-100 flex items-center justify-center mb-6 text-neutral-700">
-                {tier.icon}
+              {pkg.highlighted && (
+                <div className="absolute -top-3 left-8 px-3 py-1 bg-white text-neutral-900 text-xs font-semibold tracking-wide uppercase">
+                  {t.pricing.popular}
+                </div>
+              )}
+
+              <h3 className={`text-lg font-semibold mb-4 ${pkg.highlighted ? 'text-white' : 'text-neutral-900'}`}>
+                {pkg.data.title}
+              </h3>
+
+              <div className="flex items-baseline gap-2 mb-2">
+                <span className={`text-sm ${pkg.highlighted ? 'text-neutral-400' : 'text-neutral-500'}`}>
+                  {t.pricing.startingFrom}
+                </span>
+                <span className={`text-3xl font-semibold ${pkg.highlighted ? 'text-white' : 'text-neutral-900'}`}>
+                  {pkg.data.price}
+                </span>
               </div>
-              <h3 className="text-lg font-semibold text-neutral-900 mb-2">{tier.title}</h3>
-              <div className="flex items-baseline gap-2 mb-4">
-                <span className="text-sm text-neutral-500">{t.pricing.startingFrom}</span>
-                <span className="text-sm font-medium text-neutral-700">{tier.duration}</span>
+
+              <div className={`text-sm mb-5 ${pkg.highlighted ? 'text-neutral-400' : 'text-neutral-500'}`}>
+                {pkg.data.duration}
               </div>
-              <p className="text-sm text-neutral-600">{tier.description}</p>
+
+              <p className={`text-sm mb-6 ${pkg.highlighted ? 'text-neutral-300' : 'text-neutral-600'}`}>
+                {pkg.data.description}
+              </p>
+
+              <ul className="space-y-3 mb-6 flex-1">
+                {pkg.data.features.map((feature, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm">
+                    <svg
+                      className={`w-5 h-5 flex-shrink-0 mt-0.5 ${pkg.highlighted ? 'text-white' : 'text-neutral-900'}`}
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span className={pkg.highlighted ? 'text-neutral-200' : 'text-neutral-700'}>
+                      {feature}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div
+                className={`mb-4 pt-4 border-t ${
+                  pkg.highlighted ? 'border-neutral-700' : 'border-neutral-200'
+                }`}
+              >
+                <div className="flex items-baseline gap-1">
+                  <span className={`text-xs font-semibold ${pkg.highlighted ? 'text-white' : 'text-neutral-900'}`}>
+                    + {pkg.data.monthlyPrice}
+                  </span>
+                  <span className={`text-[11px] ${pkg.highlighted ? 'text-neutral-400' : 'text-neutral-500'}`}>
+                    {t.pricing.monthlyPer}
+                  </span>
+                </div>
+                <div className={`text-[11px] ${pkg.highlighted ? 'text-neutral-400' : 'text-neutral-500'}`}>
+                  {t.pricing.monthlyRequired}
+                </div>
+              </div>
+
+              <Button
+                variant={pkg.highlighted ? 'primary' : 'outline'}
+                className="w-full"
+                onClick={() => {
+                  const element = document.querySelector('#contact');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                {t.pricing.cta}
+              </Button>
             </div>
           ))}
         </div>
 
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pt-8 border-t border-neutral-200">
-          <p className="text-sm text-neutral-600 max-w-xl">
+        <div className="pt-8 border-t border-neutral-200 space-y-3">
+          <p className="text-sm text-neutral-600 text-center max-w-2xl mx-auto">
+            {t.pricing.monthlyNote}
+          </p>
+          <p className="text-sm text-neutral-500 text-center max-w-2xl mx-auto">
             {t.pricing.note}
           </p>
-          <Button onClick={() => {
-            const element = document.querySelector('#contact');
-            if (element) {
-              element.scrollIntoView({ behavior: 'smooth' });
-            }
-          }}>
-            {t.pricing.cta}
-          </Button>
         </div>
       </Container>
     </section>

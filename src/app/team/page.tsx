@@ -24,6 +24,11 @@ function TeamContent() {
       initials: 'MM',
       color: 'bg-neutral-500',
     },
+    {
+      ...t.team.members.denis,
+      initials: 'DK',
+      color: 'bg-neutral-800',
+    },
   ];
 
   return (
