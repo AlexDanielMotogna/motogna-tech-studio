@@ -1,8 +1,118 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useLocale } from '@/lib/locale-context';
 import Container from '../ui/Container';
+import GalleryModal from '../ui/GalleryModal';
+
+interface ProjectGalleryPreviewProps {
+  images: string[];
+  title: string;
+  viewGalleryLabel: string;
+  onOpen: () => void;
+}
+
+function ProjectGalleryPreview({ images, title, viewGalleryLabel, onOpen }: ProjectGalleryPreviewProps) {
+  const [index, setIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (isPaused || images.length <= 1) return;
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % images.length);
+    }, 4000);
+    return () => clearInterval(id);
+  }, [isPaused, images.length]);
+
+  const goTo = (e: React.MouseEvent, target: number) => {
+    e.stopPropagation();
+    setIndex(((target % images.length) + images.length) % images.length);
+  };
+
+  return (
+    <div
+      className="relative w-full aspect-[16/9] bg-neutral-50 group overflow-hidden cursor-pointer"
+      onClick={onOpen}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      role="button"
+      tabIndex={0}
+      aria-label={`Open gallery for ${title}`}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onOpen();
+        }
+      }}
+    >
+      {images.map((src, i) => (
+        <Image
+          key={src}
+          src={src}
+          alt={`${title} ${i + 1}`}
+          fill
+          className={`object-contain transition-opacity duration-700 ${
+            i === index ? 'opacity-100' : 'opacity-0'
+          }`}
+          sizes="(max-width: 1024px) 100vw, 1024px"
+          quality={95}
+          unoptimized
+          priority={i === 0}
+        />
+      ))}
+
+      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center pointer-events-none">
+        <div className="opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-2 px-4 py-2 bg-white text-neutral-900 text-sm font-medium">
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h12a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM4 16l4-4a3 3 0 014 0l4 4M14 14l1-1a3 3 0 014 0l1 1M14 8h.01" />
+          </svg>
+          {viewGalleryLabel} ({images.length})
+        </div>
+      </div>
+
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={(e) => goTo(e, index - 1)}
+            className="absolute left-2 top-1/2 -translate-y-1/2 p-2 bg-white/80 hover:bg-white text-neutral-900 opacity-0 group-hover:opacity-100 transition-opacity"
+            aria-label="Previous image"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={(e) => goTo(e, index + 1)}
+            className="absolute right-2 top-1/2 -translate-y-1/2 p-2 bg-white/80 hover:bg-white text-neutral-900 opacity-0 group-hover:opacity-100 transition-opacity"
+            aria-label="Next image"
+          >
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                onClick={(e) => goTo(e, i)}
+                className={`h-1.5 transition-all ${
+                  i === index ? 'w-6 bg-white' : 'w-1.5 bg-white/50 hover:bg-white/80'
+                }`}
+                aria-label={`Go to image ${i + 1}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+
+      <div className="absolute top-3 right-3 px-2 py-1 bg-black/60 text-white text-xs font-medium backdrop-blur-sm">
+        {index + 1} / {images.length}
+      </div>
+    </div>
+  );
+}
 
 type FilterType = 'all' | 'platforms' | 'software' | 'websites';
 
@@ -15,7 +125,22 @@ interface ProjectMeta {
   category: FilterType;
   url?: string;
   isLive: boolean;
+  gallery?: string[];
 }
+
+const buildGallery = (folder: string, count: number, startIndex = 1): string[] =>
+  Array.from({ length: count }, (_, i) =>
+    `/images/${folder}/${String(i + startIndex).padStart(2, '0')}.png`
+  );
+
+const rhinosGallery = buildGallery('Rhinos-training', 21);
+const teamTrainerGallery = buildGallery('Team-Trainer', 16);
+const azMoldovanGallery = buildGallery('Az-Moldovan', 3);
+const edelRestaurantGallery = buildGallery('Edel-Restaurant', 9);
+const filipBonatGallery = buildGallery('Filip-Bonat', 7);
+const l2pControlGallery = buildGallery('L2P-Controll', 6);
+const schratterGallery = buildGallery('Schratter', 10);
+const tradefightersGallery = buildGallery('Tfc.gg', 17);
 
 const projectsMeta: ProjectMeta[] = [
   {
@@ -25,6 +150,7 @@ const projectsMeta: ProjectMeta[] = [
     category: 'platforms',
     url: 'https://rhinos-training.at',
     isLive: true,
+    gallery: rhinosGallery,
   },
   {
     id: 2,
@@ -41,6 +167,7 @@ const projectsMeta: ProjectMeta[] = [
     category: 'platforms',
     url: 'https://tradefighters.xyz',
     isLive: true,
+    gallery: tradefightersGallery,
   },
   {
     id: 4,
@@ -49,6 +176,7 @@ const projectsMeta: ProjectMeta[] = [
     category: 'websites',
     url: 'https://filip-bonat-deploy.vercel.app',
     isLive: true,
+    gallery: filipBonatGallery,
   },
   {
     id: 5,
@@ -56,6 +184,7 @@ const projectsMeta: ProjectMeta[] = [
     stack: ['React', 'TypeScript', 'Vite', 'MUI', 'Express', 'Prisma', 'PWA', 'Cloudinary'],
     category: 'software',
     isLive: false,
+    gallery: teamTrainerGallery,
   },
   {
     id: 6,
@@ -64,6 +193,7 @@ const projectsMeta: ProjectMeta[] = [
     category: 'websites',
     url: 'https://restaurant-edel.at',
     isLive: true,
+    gallery: edelRestaurantGallery,
   },
   {
     id: 7,
@@ -72,6 +202,7 @@ const projectsMeta: ProjectMeta[] = [
     category: 'websites',
     url: 'https://az-moldovan.at',
     isLive: true,
+    gallery: azMoldovanGallery,
   },
   {
     id: 8,
@@ -80,6 +211,7 @@ const projectsMeta: ProjectMeta[] = [
     category: 'software',
     url: 'https://l2p-control-zehr.vercel.app',
     isLive: true,
+    gallery: l2pControlGallery,
   },
   {
     id: 9,
@@ -88,6 +220,7 @@ const projectsMeta: ProjectMeta[] = [
     category: 'websites',
     url: 'https://www.schratter-erdbau.at',
     isLive: true,
+    gallery: schratterGallery,
   },
 ];
 
@@ -95,6 +228,7 @@ export default function Work() {
   const { t } = useLocale();
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
+  const [galleryProject, setGalleryProject] = useState<ProjectMeta | null>(null);
 
   const filters: { key: FilterType; label: string }[] = [
     { key: 'all', label: t.work.filters.all },
@@ -142,8 +276,16 @@ export default function Work() {
             return (
               <article
                 key={project.id}
-                className="bg-white border border-neutral-200 hover:border-neutral-300 transition-all duration-200"
+                className="bg-white border border-neutral-200 hover:border-neutral-300 transition-all duration-200 overflow-hidden"
               >
+                {project.gallery && project.gallery.length > 0 && (
+                  <ProjectGalleryPreview
+                    images={project.gallery}
+                    title={projectData.title}
+                    viewGalleryLabel={t.work.viewGallery}
+                    onOpen={() => setGalleryProject(project)}
+                  />
+                )}
                 <div className="p-6 lg:p-8">
                   <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
                     <div className="flex-1">
@@ -235,6 +377,14 @@ export default function Work() {
           <p className="text-sm text-neutral-500">{t.work.ndaNote}</p>
         </div>
       </Container>
+
+      {galleryProject && galleryProject.gallery && (
+        <GalleryModal
+          images={galleryProject.gallery}
+          title={t.work.projects[galleryProject.key].title}
+          onClose={() => setGalleryProject(null)}
+        />
+      )}
     </section>
   );
 }

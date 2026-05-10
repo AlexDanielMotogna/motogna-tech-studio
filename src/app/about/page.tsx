@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useLocale } from '@/lib/locale-context';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -73,10 +74,17 @@ function AboutContent() {
                   {'p3' in t.about.story && <p className="font-medium text-neutral-900">{(t.about.story as { p3: string }).p3}</p>}
                 </div>
               </div>
-              <div className="bg-neutral-200 aspect-[4/3] flex items-center justify-center">
-                <svg className="w-16 h-16 text-neutral-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+              <div className="relative aspect-[4/3] bg-neutral-100 overflow-hidden">
+                <Image
+                  src="/images/Alex.png"
+                  alt="Alex Daniel Motogna"
+                  fill
+                  className="object-contain object-right"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  quality={95}
+                  unoptimized
+                  priority
+                />
               </div>
             </div>
           </Container>
